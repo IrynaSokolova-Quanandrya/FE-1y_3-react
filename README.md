@@ -1,68 +1,70 @@
-1. MPA vs SPA
-2. Що таке react
-3. Virtual DOM
-4. Для створення React-застосунку необхідні Node.js, Webpack, Babel, React і
-   DevTools.
-5. Створюємо react-app
-6. Що знаходиться в package.json
-7. public
-8. div з id root
-9. render ()
-10. Інструменти розробника
-11. JSX:
+# Getting Started with Create React App
 
-    - створення
-    - завжди закриваючий слеш
-    - фрагмент
-    - вікно во js - JSX вираз {}
-    - рендер за умовою
-    - Колекції
-    - Ключі​
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-12. Що таке React компонент
-    - функціональний
-    - класовий
-    - умови назви компонентів та їх використання
-13. App
+## Available Scripts
 
-`JSON` [ { "id": "id-1", "url":
-"https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg",
-"title": "Feathers. Art abstract", "price": 500, "author": { "tag":
-"ractapopulous", "url": "https://pixabay.com/users/ractapopulous-24766/" },
-"quantity": 10 }, { "id": "id-2", "url":
-"https://cdn.pixabay.com/photo/2017/08/02/22/38/bird-2573779_1280.jpg", "title":
-"Bird. Animal art abstract", "price": 400, "author": { "tag": "ractapopulous",
-"url": "https://pixabay.com/users/ractapopulous-24766/" }, "quantity": 15 }, {
-"id": "id-3", "url":
-"https://cdn.pixabay.com/photo/2017/09/04/22/40/flowers-2715804_1280.jpg",
-"title": "Flowers. Tulip nature art abstract", "price": 600, "author": { "tag":
-"ractapopulous", "url": "https://pixabay.com/users/ractapopulous-24766/" },
-"quantity": 5 } ]
+In the project directory, you can run:
 
-## компонент 'Painting'
+### `npm start`
 
-```HTML
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-<div>
-  <img src="" alt="" width="480" />
-  <h2></h2>
-  <p>Автор: <a href=""></a></p>
-  <p>Ціна: грн</p>
-  <p>Доступність: закінчується чи є в наявності</p>
-  <button type="button">Додати в кошик</button>
-</div>
-```
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## компонент 'PaintingList'
+### `npm test`
 
-<ul>
-  <li>Painting</li>
-  ...
-</ul>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## компонент 'Section'
+### `npm run build`
 
-<div style="outline: 1px solid tomato;">
-  <h2></h2>
-  Контент
-</div>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
