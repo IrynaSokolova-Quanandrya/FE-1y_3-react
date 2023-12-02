@@ -1,12 +1,18 @@
 import './App.css';
-import { Painting } from './components/Painting/Painting'
+import { Header } from './components/Header';
+import painting from './painting.json';
+import { PaintingList } from './components/PaintingList/PaintingList'
 
 export function App() {
   
   return(
-    <>
-      <Painting/>
-    </>
+    <div>
+      <Header>
+        <nav>Навігація</nav>
+        <PaintingList painting={painting}/>
+      </Header>
+      
+    </div>
   )
 }
 

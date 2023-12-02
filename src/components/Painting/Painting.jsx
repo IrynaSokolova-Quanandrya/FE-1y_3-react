@@ -1,22 +1,12 @@
-import painting from '../../painting.json';
-console.log(painting);
-// const options = painting[0]
-// false && true //false
-// false || true //true
-// !
-// умова ? true : false
-export function Painting (){    
+export const Painting = ({title, url, quantity, price, author}) => {
     return(
-        <ul>
-        {painting.map(option=> 
-        <li key={option.id}>
-            <img src={option.url} alt="" width="480" />
-            <h2>{option.title}</h2>
-            <p>Автор: <a href={option.author.url}>{option.author.url}</a>{option.author.tag}</p>
-            <p>Ціна: {option.price} грн</p>
-            <p>Доступність: {option.quantity < 5 ? 'закінчується' : `є в наявності ${option.quantity}`}</p>
+        <li>
+            <img src={url} alt="" width="480" />
+            <h2>{title}</h2>
+            <p>Автор: <a href={author.url}>{author.url}</a>{author.tag}</p>
+            <p>Ціна: {price} грн</p>
+            <p>Доступність: {quantity < 5 ? 'закінчується' : `є в наявності ${quantity}`}</p>
             <button type="button">Додати в кошик</button>
-        </li>)}
-   </ul> 
-   )
-}
+        </li>
+    )
+} 
