@@ -17,3 +17,15 @@ export function App() {
 }
 
 
+/**
+ * Recipe - recipe: array
+ * RecipeInfo - name: string; 
+ *              icon: element;
+ *              time: string;
+ *              servings: number;
+ *              calories: number;
+ *              img: string;
+ *              difficulty: number;
+ */
+
+
