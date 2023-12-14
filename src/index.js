@@ -10,4 +10,7 @@ root.render(
   </React.StrictMode>
 );
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
