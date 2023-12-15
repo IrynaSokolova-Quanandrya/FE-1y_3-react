@@ -1,3 +1,4 @@
+@import-normalize;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* ColorPicker */
+.container {
+  padding: 10px;
+}
+
+.title {
+  line-height: 1.3;
+}
+
+.option {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+}
+
+/* Alert */
+.alert {
+  line-height: 1.5;
+  padding: 10px 20px;
+  background-color: gray;
+  color: #fff;
+}
+
+.error {
+  background-color: red;
+}
+
+.warning {
+  background-color: orange;
+}
+
+.success {
+  background-color: green;
 }

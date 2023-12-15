@@ -25,44 +25,28 @@
     - умови назви компонентів та їх використання
 13. App
 
-`JSON` [ { "id": "id-1", "url":
-"https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg",
-"title": "Feathers. Art abstract", "price": 500, "author": { "tag":
-"ractapopulous", "url": "https://pixabay.com/users/ractapopulous-24766/" },
-"quantity": 10 }, { "id": "id-2", "url":
-"https://cdn.pixabay.com/photo/2017/08/02/22/38/bird-2573779_1280.jpg", "title":
-"Bird. Animal art abstract", "price": 400, "author": { "tag": "ractapopulous",
-"url": "https://pixabay.com/users/ractapopulous-24766/" }, "quantity": 15 }, {
-"id": "id-3", "url":
-"https://cdn.pixabay.com/photo/2017/09/04/22/40/flowers-2715804_1280.jpg",
-"title": "Flowers. Tulip nature art abstract", "price": 600, "author": { "tag":
-"ractapopulous", "url": "https://pixabay.com/users/ractapopulous-24766/" },
-"quantity": 5 } ]
+```json
+const colorPickerOptions = [ { label: 'red', color: '#F44336' }, { label:
+'green', color: '#4CAF50' }, { label: 'blue', color: '#2196F3' }, { label:
+'grey', color: '#607D8B' }, { label: 'pink', color: '#E91E63' }, { label:
+'indigo', color: '#3F51B5' }, ];
+```
 
-## компонент 'Painting'
+## компонент 'ColorPicker'
 
-```HTML
-
+```html
 <div>
-  <img src="" alt="" width="480" />
-  <h2></h2>
-  <p>Автор: <a href=""></a></p>
-  <p>Ціна: грн</p>
-  <p>Доступність: закінчується чи є в наявності</p>
-  <button type="button">Додати в кошик</button>
+	<h2>Color Picker</h2>
+	<div>
+		<span>label</span>
+	</div>
 </div>
 ```
 
 ## компонент 'PaintingList'
 
-<ul>
-  <li>Painting</li>
-  ...
-</ul>
+Alert Властивість 'type' може бути лише 'error' 'success' або 'warning'
 
-## компонент 'Section'
-
-<div style="outline: 1px solid tomato;">
-  <h2></h2>
-  Контент
-</div>
+```html
+<p className="alert"></p>
+```
