@@ -18,3 +18,15 @@ export const StyledAlert = styled.p`
     padding: 10px 20px;
     background-color: ${getBgc};
 `
+// App: 
+//  Container  
+//    Title  
+//  Container 
+//  Container
+//    EventList - event: array
+//    EventItem - name: string
+//                location: string
+//                speaker: string
+//                type: sting ['free', 'vip', 'paid']
+//                time: object
+//    Container 

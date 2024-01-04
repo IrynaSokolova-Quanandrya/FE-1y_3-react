@@ -15,7 +15,7 @@ export function App() {
       </Container> */}
       
 
-       {/* <PaintingList painting={painting}/> */}
+       <PaintingList painting={painting}/>
       <ColorPicker options={colorPickerOptions}/>
       <Alert text="Останнє попередження" type="warning"/>
       <Alert text="Ура! Все ок!" type="success"/>
