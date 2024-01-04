@@ -5,21 +5,17 @@ import { ColorPicker } from '../ColorPicker/ColorPicker';
 import { Alert } from '../Alert/Alert';
 import { Container, Title } from './App.styled';
 import { GlobalStyle } from '../../GlobalStyle.styled';
+import { Counter } from '../Counter/Counter';
 
 export function App() {
   return(
     <div>
-
-      {/* <Container>
-        <Title>Title</Title>
-      </Container> */}
-      
-
-       <PaintingList painting={painting}/>
-      <ColorPicker options={colorPickerOptions}/>
-      <Alert text="Останнє попередження" type="warning"/>
+      <Counter/>
+       {/* <PaintingList painting={painting}/> */}
+      {/* <ColorPicker options={colorPickerOptions}/> */}
+      {/* <Alert text="Останнє попередження" type="warning"/>
       <Alert text="Ура! Все ок!" type="success"/>
-      <Alert text="О жах - все пропало!" type="error"/>
+      <Alert text="О жах - все пропало!" type="error"/> */}
       <GlobalStyle/>
     </div>
   )
