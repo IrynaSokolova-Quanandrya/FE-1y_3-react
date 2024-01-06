@@ -6,11 +6,30 @@ import { Alert } from '../Alert/Alert';
 import { Container, Title } from './App.styled';
 import { GlobalStyle } from '../../GlobalStyle.styled';
 import { Counter } from '../Counter/Counter';
+import { Component } from 'react';
 
-export function App() {
-  return(
+export class App extends Component {
+
+  state = {
+    isVisible: false,
+  }
+
+  toggleVisible = ()=>{
+    this.setState((prevState)=>{
+        return{
+          isVisible: !prevState.isVisible
+        }
+    })
+  }
+  render(){
+    return(
     <div>
-      <Counter/>
+      <button 
+        type='button' 
+          onClick={this.toggleVisible}>{this.state.isVisible ? 'Приховати' : 'Показати'}</button>
+      {this.state.isVisible && <p>Ви мене бачите</p>}
+
+      {/* <Counter/> */}
        {/* <PaintingList painting={painting}/> */}
       {/* <ColorPicker options={colorPickerOptions}/> */}
       {/* <Alert text="Останнє попередження" type="warning"/>
@@ -19,6 +38,7 @@ export function App() {
       <GlobalStyle/>
     </div>
   )
+  } 
 }
 
 

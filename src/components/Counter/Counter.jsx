@@ -1,8 +1,10 @@
-import React from 'react';
+import {Component} from 'react';
 import './Counter.css';
+import { Butttons } from './Buttons';
+import { CounterValue } from './CaunterValue';
 /**
  * класовий компонент
- * настідування
+ * наслідування
  * події
  * синтетичний івент
  * як зберегти значення event.target
@@ -22,16 +24,43 @@ import './Counter.css';
  * підняття стану
  * **/
 
-  export function Counter(){
-    return(
-      <div className="Counter__controls">
-        <span className="Counter__value">0</span>
-      <button type="button">
-        Збільшити на 1
-      </button>
-      <button type="button">
-        Зменшити на 1
-      </button>
-    </div>
-    )
-  } 
+  
+  export class Counter extends Component {
+    static defaultProps = {
+      initialValue: 0,
+    };
+      
+    state = {
+      value: this.props.initialValue,
+    }
+    handleIncrement=()=>{
+      // this.setState({
+      //   value: 5,
+      // })        
+      this.setState((prevState)=>{
+        return {
+          value: prevState.value + 1
+        }
+      })
+    }
+    handleDecrement=()=>{
+      this.setState((prevState)=>{
+        return {
+          value: prevState.value - 1
+        }
+      })      
+    }
+
+    render(){
+      return(
+        <div className="Counter Counter__controls">
+          <CounterValue value={this.state.value} a={5}/>
+          <Butttons onIncrement={this.handleIncrement}
+                    onDecrement={this.handleDecrement}
+          />
+      </div>
+      )
+    }
+  }
+
+
