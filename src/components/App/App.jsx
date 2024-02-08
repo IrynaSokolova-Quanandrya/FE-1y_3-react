@@ -1,31 +1,37 @@
-import painting from '../../painting.json';
-import {colorPickerOptions} from '../../colorOptions';
-import { PaintingList } from '../PaintingList/PaintingList';
-import { ColorPicker } from '../ColorPicker/ColorPicker';
-import { Alert } from '../Alert/Alert';
-import { Container, Title } from './App.styled';
+import { Component } from 'react';
+import { nanoid } from 'nanoid';
 import { GlobalStyle } from '../../GlobalStyle.styled';
+import initialTodos from '../../todos.json';
+import { TodoEditor } from '../TodoEditor/TodoEditor';
+import {TodoList} from '../TodoList/TodoList';
 
-export function App() {
-  return(
-    <div>
+export class App extends Component {
+  
+  state={
+    todos: initialTodos,
+  }
+ 
+  addTodo = (text)=>{
+    const newTodo = {
+      id: nanoid(),
+      text,
+      completed: false
+    }
+    
+  this.setState((prevState)=>{
+    return {
+      todos: [newTodo, ...prevState.todos]
+    }
+  })
+  }
 
-      {/* <Container>
-        <Title>Title</Title>
-      </Container> */}
-      
-
-       <PaintingList painting={painting}/>
-      <ColorPicker options={colorPickerOptions}/>
-      <Alert text="Останнє попередження" type="warning"/>
-      <Alert text="Ура! Все ок!" type="success"/>
-      <Alert text="О жах - все пропало!" type="error"/>
+  render(){
+    return (
+      <>
+      <TodoEditor addTodo={this.addTodo}/>
+      <TodoList todos={this.state.todos}/>
       <GlobalStyle/>
-    </div>
-  )
-}
-
-
-
-
-
+      </>
+    );
+  }
+};
