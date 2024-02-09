@@ -1,13 +1,11 @@
 import React from 'react';
-import {List, Item, Text, Button} from './TodoList.styled';
+import {List} from './TodoList.styled';
+import { Todo } from './Todo';
 
 export const TodoList = ({ todos }) => (
   <List>
-    {todos.map(({ id, text }) => (
-      <Item key={id}>
-        <Text>{text}</Text>
-        <Button>Delete</Button>
-      </Item>
+    {todos.map(({ id, text, completed }) => (
+      <Todo key={id} text={text} completed={completed}/>
     ))}
   </List>
 );
