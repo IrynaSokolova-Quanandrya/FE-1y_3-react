@@ -6,6 +6,7 @@ export class App extends Component{
     return(
       <Modal>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero praesentium officia assumenda tenetur modi ducimus dicta labore, fugiat facilis aliquid expedita dolores sed. Nihil nisi perspiciatis cupiditate earum nulla.</p>
+      
       </Modal>
     )
   }
