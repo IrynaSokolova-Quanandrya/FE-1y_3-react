@@ -1,10 +1,12 @@
 export const theme = Object.freeze({
-    color: {
-        error: 'red',
-        orange: 'orange',
-        primaryTextColor: 'black',
-        green: 'green',
-        grey: 'grey',
-
-    }
+    colors:{
+          textColor: '#000',
+          bgColor: '#fff',
+          warning: 'orange',
+          success: 'green',
+          error: 'red',
+          grey: 'grey',
+          button: '#21a912',
+          accent: ' #7112ba'
+        }
 })
