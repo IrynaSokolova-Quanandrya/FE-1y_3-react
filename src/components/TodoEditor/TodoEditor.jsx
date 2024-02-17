@@ -1,4 +1,6 @@
 import { Component } from "react";
+import { CgPlayListAdd } from "react-icons/cg";
+import { Btn } from "../Button/Button";
 
 export class TodoEditor extends Component{
     state={
@@ -21,7 +23,7 @@ export class TodoEditor extends Component{
                 <label>Напишіть свою задачу                    
                     <textarea value={this.state.textValue} onChange={this.handleChange}/>                    
                 </label>
-                <button type="submit">Create</button>           
+                <Btn type="submit"><CgPlayListAdd size={50}/></Btn>           
             </form>
         )
     }

@@ -1,10 +1,14 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { GlobalStyle } from '../../GlobalStyle.styled';
+import { FaPlus } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 import initialTodos from '../../todos.json';
 import { TodoEditor } from '../TodoEditor/TodoEditor';
 import { TodoList } from '../TodoList/TodoList';
 import { Modal } from '../Modal/Modal';
+import { Btn } from "../Button/Button";
+import { GlobalStyle } from '../../GlobalStyle.styled';
+
 
 export class App extends Component {  
   state={
@@ -41,6 +45,7 @@ export class App extends Component {
       todos: [newTodo, ...prevState.todos]
     }
   })
+    this.toggleModal()
   }
 
   deleteTodo = (todoId) => {
@@ -69,13 +74,14 @@ export class App extends Component {
   render() {
     return (
       <>
-        <button type="button" onClick={this.toggleModal}>Відкрити модалку</button>
-        {this.state.showModal && <Modal>
-          <button type="button" onClick={this.toggleModal}>Закрити</button>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi omnis molestiae explicabo esse illum vitae vero natus repudiandae ipsum delectus facere eaque in tempore ad incidunt officiis veritatis magni, mollitia dolorum laudantium earum. Excepturi praesentium ea perferendis vitae vel, numquam commodi unde non dignissimos ut nam error, odit rerum odio?</p>
+        <Btn type="button" onClick={this.toggleModal}><FaPlus size={30}/></Btn>
+       
+        {this.state.showModal && <Modal onClose={this.toggleModal}>
+          <Btn type="button" onClick={this.toggleModal}><IoMdClose /></Btn>
+                  <TodoEditor addTodo={this.addTodo}/>
         </Modal>}
-      {/* <TodoEditor addTodo={this.addTodo}/>
-        {this.state.todos.length > 0 && <TodoList todos={this.state.todos} onDelete={this.deleteTodo} onToggleCompleted={this.toggleCompleted} />} */}
+      
+        {this.state.todos.length > 0 && <TodoList todos={this.state.todos} onDelete={this.deleteTodo} onToggleCompleted={this.toggleCompleted} />}
       <GlobalStyle/>
       </>
     );

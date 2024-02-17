@@ -1,4 +1,5 @@
-import {Item, Text, Button} from './TodoList.styled';
+import { Item, Text } from './TodoList.styled';
+import { Button } from '../Button/Button.styled';
 
 export const Todo = ({ todoId, text, completed, onDelete, onToggleCompleted }) => {
   
@@ -9,7 +10,6 @@ export const Todo = ({ todoId, text, completed, onDelete, onToggleCompleted }) =
   const handleChange = () => {
     onToggleCompleted(todoId)
   }
-
     return(
         <Item>
         <input
