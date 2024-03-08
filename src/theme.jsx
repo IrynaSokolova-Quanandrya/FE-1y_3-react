@@ -5,6 +5,6 @@ export const theme = Object.freeze({
         primaryTextColor: 'black',
         green: 'green',
         grey: 'grey',
-        
+        bgc: 'green',
     }
 })
