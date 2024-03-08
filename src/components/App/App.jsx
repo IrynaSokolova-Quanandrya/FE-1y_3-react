@@ -2,27 +2,30 @@ import painting from '../../painting.json';
 import {colorPickerOptions} from '../../colorOptions';
 import { PaintingList } from '../PaintingList/PaintingList';
 import { ColorPicker } from '../ColorPicker/ColorPicker';
-import { Alert } from '../Alert/Alert';
 import { Container, Title } from './App.styled';
 import { GlobalStyle } from '../../GlobalStyle.styled';
-
-export function App() {
-  return(
+import { Counter } from '../Counter/Counter';
+import { Component } from 'react';
+/**
+ * useState рефакторимо ColorPicker nf SignupForm
+ * useEffect замість методів життєвого циклу
+ * 1 - Counter
+ * 2 - створюємо SignupForm
+ * 3 - зберігаємо дані форми в localStorage 
+ * 4 - власні хуки
+ * 5 - рефакторимо попередній код todo
+ */
+export class App extends Component {
+  render(){
+    return(
     <div>
-
-      {/* <Container>
-        <Title>Title</Title>
-      </Container> */}
-      
-
-       <PaintingList painting={painting}/>
-      <ColorPicker options={colorPickerOptions}/>
-      <Alert text="Останнє попередження" type="warning"/>
-      <Alert text="Ура! Все ок!" type="success"/>
-      <Alert text="О жах - все пропало!" type="error"/>
+            {/* <Counter/>  */}
+      {/* <ColorPicker options={colorPickerOptions}/> */}
+     
       <GlobalStyle/>
     </div>
   )
+  } 
 }
 
 
