@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import {Component, useEffect, useState} from 'react';
 import './Counter.css';
 import { Butttons } from './Buttons';
 import { CounterValue } from './CaunterValue';
@@ -36,57 +36,60 @@ import { CounterValue } from './CaunterValue';
   //   }
   // }
 
-  export class Counter extends Component {
-  state = {
-    counterA: 0,
-    counterB: 0,
+  export const Counter = () => {
+    const [counterA, setCounterA] = useState(0)
+    const [counterB, setCounterB] = useState(0)
+       
+    const handleCounterAIncrement = () => {
+    setCounterA(prevCounterA => prevCounterA + 1)
   };
 
-  handleCounterAIncrement = () => {
-    this.setState(({ counterA }) => ({ counterA: counterA + 1 }));
-  };
+    const handleCounterBIncrement = () => {
+    setCounterB(prevCounterB => prevCounterB + 1)
+    };
+    
+    useEffect(() => {
+            console.log(`Всього клікнули ${counterA + counterB} разів`);
+    },[counterA, counterB])
 
-  handleCounterBIncrement = () => {
-    this.setState(({ counterB }) => ({ counterB: counterB + 1 }));
-  };
+// componentDidMount() {
+//   const { counterA, counterB } = this.state;
+//   const totalClicks = counterA + counterB;
 
-componentDidMount() {
-  const { counterA, counterB } = this.state;
-  const totalClicks = counterA + counterB;
+//   document.title = `Всього клікнули ${totalClicks} разів`;
+//   console.log(document.title);
+// }
 
-  document.title = `Всього клікнули ${totalClicks} разів`;
-}
+// componentDidUpdate(prevProps, prevState) {
+//   const { counterA, counterB } = this.state;
 
-componentDidUpdate(prevProps, prevState) {
-  const { counterA, counterB } = this.state;
+//   if (prevState.counterA !== counterA || prevState.counterB !== counterB) {
+//     const totalClicks = counterA + counterB;
 
-  if (prevState.counterA !== counterA || prevState.counterB !== counterB) {
-    const totalClicks = counterA + counterB;
+//     document.title = `Всього клікнули ${totalClicks} разів`;
+//     console.log(document.title);
+//   }
+// }
 
-    document.title = `Всього клікнули ${totalClicks} разів`;
-  }
-}
-
-  render() {
     return (
       <>
         <button
           className='btn'
           type="button"
-          onClick={this.handleCounterAIncrement}
+          onClick={handleCounterAIncrement}
         >
-          Кликнули counterA {this.state.counterA} раз
+          Клікнули counterA {counterA} разів
         </button>
 
         <button
           className='btn'
           type="button"
-          onClick={this.handleCounterBIncrement}
+          onClick={handleCounterBIncrement}
         >
-          Кликнули counterB {this.state.counterB} раз
+          Клікнули counterB {counterB} разів
         </button>
       </>
     );
-  }
+ 
 }
 

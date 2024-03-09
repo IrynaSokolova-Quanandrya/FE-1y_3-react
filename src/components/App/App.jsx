@@ -3,8 +3,9 @@ import { ColorPicker } from '../ColorPicker/ColorPicker';
 import { GlobalStyle } from '../../GlobalStyle.styled';
 import { Counter } from '../Counter/Counter';
 import { Component } from 'react';
+import { Form } from '../SignupForm/Form';
 /**
- * useState рефакторимо ColorPicker nf SignupForm
+ * useState рефакторимо ColorPicker та SignupForm
  * useEffect замість методів життєвого циклу
  * 1 - Counter
  * 2 - створюємо SignupForm
@@ -18,7 +19,8 @@ export class App extends Component {
     return(
     <div>
             <Counter/> 
-      <ColorPicker options={colorPickerOptions}/>
+        {/* <ColorPicker options={colorPickerOptions}/> */}
+        {/* <Form/> */}
      
       <GlobalStyle/>
     </div>
