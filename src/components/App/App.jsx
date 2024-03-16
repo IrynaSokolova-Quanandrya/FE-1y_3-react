@@ -4,6 +4,7 @@ import { GlobalStyle } from '../../GlobalStyle.styled';
 import { Counter } from '../Counter/Counter';
 import { Component } from 'react';
 import { Form } from '../SignupForm/Form';
+import { Clock } from '../Clock/Clock';
 /**
  * useState рефакторимо ColorPicker та SignupForm
  * useEffect замість методів життєвого циклу
@@ -18,10 +19,11 @@ export class App extends Component {
   render(){
     return(
     <div>
-            <Counter/> 
+            {/* <Counter/>  */}
         {/* <ColorPicker options={colorPickerOptions}/> */}
         {/* <Form/> */}
-     
+        <Clock />
+       
       <GlobalStyle/>
     </div>
   )
