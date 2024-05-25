@@ -4,3 +4,7 @@
     background-color: teal;
     color: white;
 }
+
+.active{
+    color: red;
+}
