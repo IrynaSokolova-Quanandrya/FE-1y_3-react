@@ -8,7 +8,8 @@ const CatDetailPage = () => {
     console.log(catId);
 
     return (
-        <h1>Cat: { catId }</h1>
+        <h1>Cat: {catId}</h1>
+        
     )
 }
 
