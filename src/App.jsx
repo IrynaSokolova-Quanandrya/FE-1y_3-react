@@ -15,7 +15,7 @@ import Layout from './Pages/Layout';
  *      -записуємо "" якщо інпут пустий
  * 3 - useLocation (location.state?.from ?? ''/cats) юзаєм Елвіса
  * 4 - useNavigate
- * 5 - 
+ * 5 - Lazy
  * 
  */
 
