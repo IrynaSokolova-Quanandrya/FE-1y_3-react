@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import CatItem from '../Components/CatItem';
-import { useSearchParams} from 'react-router-dom';
+import { useSearchParams, useLocation, Link} from 'react-router-dom';
 
 const CatsPage = () => {
     const [cats, setCats] = useState(['cat-1', 'cat-2', 'cat-3', 'cat-4']);
-
+    const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams()
     const catId = searchParams.get('name') ?? ''
 
@@ -29,7 +29,14 @@ const CatsPage = () => {
             <ul>
                 {visibleCats().map(cat => {
                     return (
-                        <CatItem key={cat} cat={cat}/>
+                        <li key={cat}>
+                            <Link
+                                to={`${cat}`}
+                                key={cat}
+                                cat={cat}
+                                state={{ from: location }}>{cat}</Link>
+                        </li>
+                        
                     )
                 })}
             </ul>

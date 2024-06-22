@@ -1,13 +1,18 @@
-import {useParams, Link, Outlet, useNavigate, NavLink} from 'react-router-dom'
+import {useParams, Link, Outlet, useNavigate, NavLink, useLocation} from 'react-router-dom'
 
 const CatDetailPage = () => {
     const { catId } = useParams();  
     const navigate = useNavigate()
+    const location = useLocation()
 
+    console.log(location.state.from);
+
+    
     return (
         <>
             <h1>Cat: {catId}</h1>
-            <Link to='/cats'>Go back</Link>
+            <Link
+                to={location.state?.from ?? '/cats'}>Go back</Link>
             <button type='button' onClick={()=>navigate('/', {replace: true})}>На головну</button>
             <ul>
                 <li><NavLink to='description'>Description</NavLink></li>  
