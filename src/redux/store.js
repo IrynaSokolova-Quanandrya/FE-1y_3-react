@@ -12,6 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { taskReducer } from './tasks/taskSlice';
 import { filtersReducer } from './tasks/filterSlice';
+import { authReducer } from './auth/authSlice';
 // 
 /**
  * 1. Додаємо маршрутизацію
@@ -19,7 +20,6 @@ import { filtersReducer } from './tasks/filterSlice';
  * 3. додаємо компоненти 
  * 
  */
-// import { authSlice } from './auth/slice';
 
 const middleware = (getDefaultMiddleware) => getDefaultMiddleware({
     serializableCheck: {
@@ -35,7 +35,7 @@ const authPersistConfig = {
 
 export const store = configureStore({
   reducer: {
-    // auth: persistReducer(authPersistConfig, authSlice.reducer),
+    auth: persistReducer(authPersistConfig, authReducer),
     tasks: taskReducer,
     filters: filtersReducer, 
   },
