@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import css from "./TaskCounter.module.css";
-import { selectTaskCounter} from "redux/selectors";
+import { selectTaskCounter} from "redux/tasks/selectors";
 
 export const TaskCounter = () => {
   const {active, completed} = useSelector(selectTaskCounter)
