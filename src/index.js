@@ -8,12 +8,12 @@ import { BrowserRouter } from "react-router-dom";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-     <PersistGate persistor={persistor}>
+    //  <PersistGate persistor={persistor}>
     <Provider store={store}>
       <BrowserRouter>
         <App /> 
        </BrowserRouter>
       </Provider>
-      </PersistGate>
+      // </PersistGate>
     
 );
